@@ -87,12 +87,7 @@ export default class BuildMenu extends Component {
 
 		const hideCancel = assertBuildMatrix(build) && !proc;
 		var handlePromote = this.handlePromote;
-		var envs = [];
-		if (build !== undefined && build.deploy_envs !== undefined) {
-			envs = build.deploy_envs.map(function(env) {
-				return env.name;
-			});
-		}
+		var envs = ["beta", "release"];
 
 		return (
 			<div>
